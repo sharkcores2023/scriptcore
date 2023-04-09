@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <style>
+                body::-webkit-scrollbar {
+            width: 1px;               
+        }
+        body::-webkit-scrollbar-track {
+            background: rgb(14, 14, 14);        
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(29, 29, 29);    
+            border-radius: 20px;      
+            border: 3px solid rgb(63, 63, 63); 
+        }
+                .Title{
+                    padding-left: 20px;
+                    padding-right: 20px;
+        display: block;
+        font-family: sans-serif;
+        color: white;
+        text-align: center;
+        text-decoration: underline;
+        }
+
+
+        body{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            user-select: none;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+            background-color: rgb(20, 20, 20);
+        }
+        #topbar{
+            background-color:  rgb(29, 29, 29);
+            z-index: 999;
+            user-select: none;
+            width: 100vw;
+            position: fixed;
+            margin-top: -8px;
+            box-shadow: 0px 0px 20px rgb(8, 8, 8);
+            border: 1px black solid;
+            border-radius: none;
+        }
+        #btn{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(29, 29, 29);
+            border-radius: 0;
+            border-style: none;
+            font-size: 20px;
+            color: white;
+            font-family: sans-serif;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+        #btn:hover{
+            background-color: rgb(20, 20, 20);
+            text-decoration: underline;
+            color:rgb(201, 255, 4);
+            
+        }
+    </style>
+    <div id="topbar">
+        <button id="btn">Home</button>
+        <button id="btn">About</button>
+        <button id="btn">ToS</button>
+        <button id="btn">Changes</button>
+        <button id="btn">YouTube</button>
+        <button id="btn">Discord</button>
+        <button id="btn">SharkCore</button>
+    </div>
+</body>
+</html>
