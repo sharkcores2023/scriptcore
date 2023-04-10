@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>ScriptCore/Home</title>
 </head>
 <body>
     <style>
@@ -70,15 +70,159 @@
             color:rgb(201, 255, 4);
             
         }
+        #link{
+            color: transparent;
+        }
+        #maincontent{
+            margin-top: 100px;
+            display: flex;
+            display: block;
+            user-select: none;
+            box-shadow: 0px 0px 10px rgb(200, 255, 0);
+            border: 1px rgb(200, 255, 0) solid;
+             border-radius: none;
+             background-color: transparent;
+             margin-bottom: 20px;
+             background-color:  rgb(29, 29, 29);
+             width: 200px; 
+             height: 115px; 
+             transition: 0.2s;
+        }
+        #maincontent:hover{
+            opacity: 50%;
+            color: rgb(200, 255, 0);
+        }
+
+        #Title{
+            display: block;
+            font-family: sans-serif;
+            color: white;
+            text-align: center;
+            text-decoration: underline;
+        }
+        #slogan{
+            font-family: sans-serif;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-size: 20px;
+            margin-top: -30px;
+            text-align: center;
+        }
+        #typebox{
+            border-style: none;
+            color: white;
+            height: 30px;
+            transition: 0.2s;
+            user-select: none;
+            box-shadow: 0px 0px 10px rgb(200, 255, 0);
+            border: 1px rgb(200, 255, 0) solid;
+            border-radius: none;
+            background-color: transparent;
+            width: 200px;
+            text-align: start;
+            margin-top: 30px;
+            text-align: center;
+            outline: none;
+            transition: 0.2s;
+        }
+        #typebox:hover{
+            background-color: black;
+        }
+        #helpboxbtn{
+            margin-left: -135px;
+            margin-top: -25px;
+            box-shadow: 0px 0px 10px rgb(200, 255, 0);
+            border: 1px rgb(200, 255, 0) solid;
+            color: white;
+            background-color: rgb(29, 29,29);
+            height: 20px;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+        #helpbox{
+            width: 250px;
+            height: 240px;
+            background-color: rgb(29, 29, 29);
+            box-shadow: 0px 0px 10px rgb(200, 255, 0);
+            border: 1px rgb(200, 255, 0) solid;
+            margin-top: -135px;
+            margin-left: -550px;
+            text-align: center;
+        }
+        #helpboxbtn:hover{
+            background-color: black;
+            color: rgb(200, 255, 0);
+        }
+        #searchbtn{
+            height: 30px;
+            width: 60px;
+            background-color: rgb(29, 29, 29);
+            box-shadow: 0px 0px 10px rgb(200, 255, 0);
+            border: 1px rgb(200, 255, 0) solid;
+            color: white;
+            margin-top: -137px;
+            margin-right: -145px;
+            transition: 0.2s;
+        }
+        #searchbtn:hover{
+            background-color: black;
+        }
+        #hint{
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #span1{
+            font-size: 17px;
+        }
     </style>
     <div id="topbar">
-        <button id="btn">Home</button>
-        <button id="btn">About</button>
-        <button id="btn">ToS</button>
-        <button id="btn">Changes</button>
-        <button id="btn">YouTube</button>
-        <button id="btn">Discord</button>
-        <button id="btn">SharkCore</button>
+        <a id="link" href="">
+            <button id="btn">Home</button>
+        </a>
+        <a id="link" href="">
+            <button id="btn">About</button>
+        </a>
+        <a id="link" href="">
+            <button id="btn">ToS</button>
+        </a>
+        <a id="link" href="">
+            <button id="btn">Changes</button>
+        </a>
+        <a id="link" href="">
+            <button id="btn">YouTube</button>
+        </a>
+        <a id="link" href="">
+            <button id="btn">Discord</button>
+        </a>
+        <a id="link" href="https://www.shark-core.com/">
+            <button id="btn">SharkCore</button>
+        </a>
     </div>
+    <div>
+        <div id="maincontent">
+            <h1 id="Title">   ScriptCore   </h1> <br>
+            <p id="slogan">Greatest Script Libary</p>
+        </div>
+    </div>
+    <input id="typebox" type="text" placeholder="Search the Libary">
+    <div>
+        <button id="helpboxbtn">?</button>
+    </div>
+    <div id="helpbox"> 
+        <p id="hint">What You Can Search <br> <br> <span id="span1">all scripts, bypass scripts</span></p>
+    </div>
+    <button id="searchbtn">Search</button>
+    <script>
+        document.getElementById("helpbox").style.visibility="hidden";
+        document.getElementById("helpboxbtn").onmouseleave = function(){
+            document.getElementById("helpbox").style.visibility="hidden"
+        }
+        document.getElementById("helpboxbtn").onmouseenter = function(){
+            document.getElementById("helpbox").style.visibility="visible"
+        }
+        document.getElementById("searchbtn").style.visibility="hidden"
+    </script>
 </body>
 </html>
