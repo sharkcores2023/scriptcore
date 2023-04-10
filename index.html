@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://media.discordapp.net/attachments/958047849441030224/1059135224090460230/shark-core1.png?width=412&amp;height=412">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScriptCore/Home</title>
 </head>
 <body>
@@ -30,6 +32,7 @@
 
 
         body{
+            overflow-x: hidden;
             background-color: white;
             display: flex;
             align-items: center;
@@ -120,10 +123,11 @@
             background-color: transparent;
             width: 200px;
             text-align: start;
-            margin-top: 30px;
+            margin-top: 5px;
             text-align: center;
             outline: none;
             transition: 0.2s;
+            font-size: 15px;
         }
         #typebox:hover{
             background-color: black;
@@ -161,8 +165,9 @@
             border: 1px rgb(200, 255, 0) solid;
             color: white;
             margin-top: -137px;
-            margin-right: -145px;
+            margin-right: -0px;
             transition: 0.2s;
+            font-size: 15px;
         }
         #searchbtn:hover{
             background-color: black;
@@ -175,6 +180,25 @@
         }
         #span1{
             font-size: 17px;
+        }
+        #checkbtn{
+            color: white;
+            background-color: rgb(29,29,29);
+            box-shadow: 0px 0px 10px rgb(200, 255, 0);
+            border: 1px rgb(200, 255, 0) solid;
+            transition: 0.2s;
+            width: 80px;
+            height: 30px;
+            font-size: 15px;
+            margin-top: -80px;
+        }
+        #checkbtn:hover{
+            background-color: black;
+        }
+        #linkbtn{
+            font-size: 0px;
+            color: transparent;
+            margin-right: -145px;
         }
     </style>
     <div id="topbar">
@@ -190,13 +214,13 @@
         <a id="link" href="">
             <button id="btn">Changes</button>
         </a>
-        <a id="link" href="">
+        <a id="link" target="_blank" href="https://www.youtube.com/channel/UCck_7Hc2i2TjzoQjGbf6e0Q">
             <button id="btn">YouTube</button>
         </a>
-        <a id="link" href="">
+        <a id="link" target="_blank" href="https://discord.gg/GbmKuJBxyP">
             <button id="btn">Discord</button>
         </a>
-        <a id="link" href="https://www.shark-core.com/">
+        <a id="link" target="_blank" href="https://www.shark-core.com/">
             <button id="btn">SharkCore</button>
         </a>
     </div>
@@ -213,7 +237,8 @@
     <div id="helpbox"> 
         <p id="hint">What You Can Search <br> <br> <span id="span1">all scripts, bypass scripts</span></p>
     </div>
-    <button id="searchbtn">Search</button>
+        <a id="linkbtn" href=""><button id="searchbtn">Search</button> </a>
+    <button id="checkbtn">Check</button>
     <script>
         document.getElementById("helpbox").style.visibility="hidden";
         document.getElementById("helpboxbtn").onmouseleave = function(){
@@ -223,6 +248,41 @@
             document.getElementById("helpbox").style.visibility="visible"
         }
         document.getElementById("searchbtn").style.visibility="hidden"
+        document.getElementById("searchbtn").onclick = function(){
+            document.getElementById("typebox").value=""
+        }
+        document.getElementById("checkbtn").onclick = function(){
+            if(document.getElementById("typebox").value=="bypass scripts"){
+                document.getElementById("linkbtn").href="https://www.shark-core.com/"
+                document.getElementById("searchbtn").style.visibility="visible"
+                document.getElementById("typebox").style.width="140px"
+                document.getElementById("typebox").style.marginLeft="-60px"
+                document.getElementById("checkbtn").innerHTML="Available"
+                setTimeout(function(){
+                    document.getElementById("checkbtn").innerHTML="Check";
+                }, 800);
+            }
+            else if(document.getElementById("typebox").value=="all scripts"){
+                document.getElementById("linkbtn").href="https://www.shark-core.com/"
+                document.getElementById("searchbtn").style.visibility="visible"
+                document.getElementById("typebox").style.width="140px"
+                document.getElementById("typebox").style.marginLeft="-60px"
+                document.getElementById("checkbtn").innerHTML="Available"
+                setTimeout(function(){
+                    document.getElementById("checkbtn").innerHTML="Check";
+                }, 800);
+            }
+            else(document.getElementById("checkbtn").innerHTML="Invalid",
+                document.getElementById("typebox").style.width="200px",
+                document.getElementById("typebox").marginLeft="0px",
+                document.getElementById("searchbtn").style.visibility="hidden",
+                document.getElementById("typebox").value="",
+                setTimeout(function(){
+                    document.getElementById("checkbtn").innerHTML="Check";
+                }, 800)
+            )
+            
+        }
     </script>
 </body>
 </html>
